@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Award, Target, FileText, CheckCircle, HelpCircle, ArrowRight, ShieldAlert } from 'lucide-react';
 import { programsData } from '../data';
 import { ProgramDetail } from '../types';
+import programsBanner from './Programs.png';
 
 interface ProgramsViewProps {
   onNavigate: (view: string, detailId?: string) => void;
@@ -49,10 +50,8 @@ export default function ProgramsView({ onNavigate, initialSelectedId }: Programs
       {/* SECTION HERO */}
       <section 
         className="relative bg-cover bg-center pt-24 pb-10 sm:pt-28 sm:pb-12 border-b border-gray-150/60 flex items-center justify-center overflow-hidden font-sans z-10"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1431324155629-1a6edd1dec1d?auto=format&fit=crop&q=80&w=1600')` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${programsBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        {/* Dark overlay mask */}
-        <div className="absolute inset-0 bg-slate-900/65 z-0"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
           <div className="flex items-center gap-1.5 justify-center">

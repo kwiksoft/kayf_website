@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Target, Heart, Eye, Users, ArrowRight, Award, UserCheck, HelpCircle } from 'lucide-react';
 import { valuesData } from '../data';
+import aboutUsBanner from './About_us.png';
 
 interface AboutViewProps {
   onNavigate: (view: string) => void;
@@ -43,10 +44,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       {/* HEADER HERO */}
       <section 
         className="relative bg-cover bg-center pt-24 pb-10 sm:pt-28 sm:pb-12 border-b border-gray-150/60 flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1526676001881-6a7eefb302f4?auto=format&fit=crop&q=80&w=1600')` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${aboutUsBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        {/* Dark overlay mask */}
-        <div className="absolute inset-0 bg-slate-900/65 z-0"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
           <div className="flex items-center gap-1.5 justify-center">
