@@ -1,12 +1,22 @@
 import React from 'react';
 import { ArrowRight, Trophy, Users, ShieldCheck, Zap, Sparkles, Building, Landmark, Medal, Award, Heart, Shield } from 'lucide-react';
 import { motion } from 'motion/react';
+import targetHeroBanner from '../assets/images/Hero-Section.png';
+import footballImg from '../assets/images/football.png';
+import volleyballImg from './volleyball-v2.png';
+import kabaddiImg from './kabaddi-v2.png';
+import silambamImg from './silambam-v2.png';
+import coachesImg from '../assets/images/Coaches.png';
+import aboutUsBanner from './About_us.png';
+import programsBanner from './Programs.png';
 
 interface HomeViewProps {
   onNavigate: (view: string, detailId?: string) => void;
 }
 
 export default function HomeView({ onNavigate }: HomeViewProps) {
+  const [heroImgUrl, setHeroImgUrl] = React.useState(targetHeroBanner);
+
   const focusAreas = [
     { 
       title: 'Youth Participation & Engagement', 
@@ -79,7 +89,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       num: '04', 
       name: 'Coach Development', 
       desc: 'Technical instruction clinics, mental behavior workshops, and sports science orientation for PE mentors.',
-      bg: 'https://images.unsplash.com/photo-1526676037777-05a232554f75?auto=format&fit=crop&w=600&q=80'
+      bg: coachesImg
     },
     { 
       id: 'seasonal-camps', 
@@ -97,6 +107,17 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
     }
   ];
 
+  const sportFallbacks: Record<string, string> = {
+    athletics: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=500&q=80',
+    football: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80',
+    basketball: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500&q=80',
+    volleyball: 'https://images.unsplash.com/photo-1592656094267-764a45068526?auto=format&fit=crop&w=500&q=80',
+    tennis: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=500&q=80',
+    pickleball: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=500&q=80',
+    kabaddi: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=500&q=80',
+    silambam: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=500&q=80'
+  };
+
   const sportsCovered = [
     { 
       id: 'athletics', 
@@ -108,7 +129,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       id: 'football', 
       name: 'Football', 
       tag: 'Team Strategy', 
-      bg: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80'
+      bg: footballImg
     },
     { 
       id: 'basketball', 
@@ -120,7 +141,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       id: 'volleyball', 
       name: 'Volleyball', 
       tag: 'Coordination & Sets', 
-      bg: 'https://images.unsplash.com/photo-1592656094267-764a45068526?auto=format&fit=crop&w=600&q=80'
+      bg: volleyballImg
     },
     { 
       id: 'tennis', 
@@ -138,119 +159,60 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       id: 'kabaddi', 
       name: 'Kabaddi', 
       tag: 'Strength & Breath', 
-      bg: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=600&q=80'
+      bg: kabaddiImg
     },
     { 
       id: 'silambam', 
       name: 'Silambam', 
       tag: 'Heritage & Balance', 
-      bg: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=600&q=80'
+      bg: silambamImg
     }
   ];
 
   return (
     <div className="font-sans text-brand-black bg-[#FDFDFB]">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-16 pb-16 md:pt-20 md:pb-24 bg-[#FDFDFB] overflow-hidden border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Narrative Block */}
-            <div className="lg:col-span-7 space-y-6 text-left lg:pr-20">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-[1px] bg-brand-sandal"></div>
-                <span className="text-brand-sandal uppercase text-[10px] font-bold tracking-[0.2em]">Institutional Athletics</span>
-              </div>
-
-              <motion.h1 
-                initial={{ opacity: 0, x: -60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-brand-blue tracking-tight leading-[1.1]"
-              >
-                Movement With <br/>
-                Purpose.
-              </motion.h1>
-
-              <p className="text-sm sm:text-base text-gray-500 max-w-xl font-sans leading-relaxed">
-                Kalgreen Youth Foundation (KAYF) is committed to creating structured opportunities for youth development through sports, participation, discipline, leadership, and community engagement. Upgrading sporting systems from grassroots levels to competitive excellence.
-              </p>
-
-              {/* Action buttons */}
-              <div className="pt-4 flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={() => onNavigate('programs')}
-                  className="px-6 py-3 bg-brand-blue hover:bg-brand-blue/90 text-white text-xs font-semibold uppercase tracking-wider rounded-sm shadow-sm transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer group"
-                >
-                  <span>Explore Programs</span>
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button
-                  onClick={() => onNavigate('join')}
-                  className="px-6 py-3 bg-white border border-gray-200 text-brand-black text-xs font-semibold uppercase tracking-wider rounded-sm hover:bg-gray-50 transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
-                >
-                  <span>Join the Movement</span>
-                </button>
-              </div>
-
-              {/* Minimalist Metrics list row */}
-              <div className="flex gap-6 pt-6">
-                <div className="flex flex-col border-l-2 border-brand-sandal pl-4">
-                  <span className="text-2xl font-display font-bold text-brand-black">12+</span>
-                  <span className="text-[9px] uppercase text-gray-405 tracking-widest font-bold font-mono">Partner Schools</span>
-                </div>
-                <div className="flex flex-col border-l-2 border-brand-sandal pl-4">
-                  <span className="text-2xl font-display font-bold text-brand-black">4.5k</span>
-                  <span className="text-[9px] uppercase text-gray-405 tracking-widest font-bold font-mono">Athletes Engaged</span>
-                </div>
-                <div className="flex flex-col border-l-2 border-brand-sandal pl-4">
-                  <span className="text-2xl font-display font-bold text-brand-black">08</span>
-                  <span className="text-[9px] uppercase text-gray-405 tracking-widest font-bold font-mono">Core Disciplines</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Brand Card transformed to Premium Minimalist Graphic Frame with Stock Photo background */}
-            <motion.div 
-              className="lg:col-span-5 block"
-              initial={{ opacity: 0, x: 60 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+      <section 
+        className="relative w-full aspect-[3/2] overflow-hidden border-b border-gray-100 flex items-end pb-[16.5%] sm:pb-[16%] md:pb-[15%] lg:pb-[14.5%] xl:pb-[14%]"
+      >
+        <img 
+          src={heroImgUrl} 
+          alt="Hero Banner" 
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover z-0" 
+        />
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Live Action buttons floating responsively on top of the lower-left side over the grass area */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+            className="relative z-10 flex flex-col sm:flex-row gap-2 sm:gap-3 max-w-[170px] sm:max-w-md text-left"
+          >
+            <button
+              onClick={() => onNavigate('programs')}
+              className="px-4 py-2 sm:px-6 sm:py-3 bg-brand-blue hover:bg-brand-blue/90 text-white text-[9px] sm:text-xs font-bold uppercase tracking-wider rounded-sm shadow-md transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer group"
             >
-              <div 
-                className="relative h-[380px] bg-cover bg-center border border-brand-blue/15 flex flex-col justify-between p-6 overflow-hidden rounded-sm group shadow-sm hover:shadow-md transition-all duration-300"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80')" }}
-              >
-                {/* Visual blend overlay gradient for legibility - deepen bottom shadow */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent z-0 transition-opacity duration-300"></div>
-
-                <div className="relative z-10 flex justify-between items-start">
-                  <span className="text-[10px] font-mono font-bold tracking-wider text-brand-blue uppercase bg-white px-2 py-1 border border-brand-blue/10 rounded-sm">KAYF EST. 2026</span>
-                  <div className="w-16 h-16 border border-brand-blue/20 rounded-full flex items-center justify-center rotate-12 bg-white shadow-sm">
-                    <span className="text-[9px] text-brand-blue font-bold uppercase tracking-widest text-center leading-[1.1]">Character<br/>First</span>
-                  </div>
-                </div>
-                {/* Bottom text wrapper infused with a rich text shadow gradient backup for maximized legibility */}
-                <div className="relative z-10 space-y-1.5 text-left bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 -mx-6 -mb-6">
-                  <span className="text-4xl md:text-5xl font-display font-medium text-white leading-none tracking-tighter uppercase block [text-shadow:_0_2px_4px_rgba(0,0,0,0.8)]">
-                    PROGRESSIVE<br/>ATHLETICS
-                  </span>
-                  <span className="text-[10px] uppercase font-mono tracking-[0.2em] text-brand-sandal font-bold block pt-1 [text-shadow:_0_1px_2px_rgba(0,0,0,0.9)]">
-                    Building Tamil Nadu Youth
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+              <span>Explore Programs</span>
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
+              onClick={() => onNavigate('join')}
+              className="px-4 py-2 sm:px-6 sm:py-3 bg-white border border-gray-200 text-brand-black text-[9px] sm:text-xs font-bold uppercase tracking-wider rounded-sm hover:bg-gray-50 shadow-md transition-all duration-200 flex items-center justify-center space-x-2 cursor-pointer"
+            >
+              <span>Join the Movement</span>
+            </button>
+          </motion.div>
         </div>
       </section>
 
       {/* 2. INSTITUTIONAL STATEMENT (Sports Beyond Competition) */}
       <section 
         className="py-16 bg-cover bg-center bg-no-repeat relative border-y border-gray-250/60"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80')" }}
+        style={{ backgroundImage: `url('${aboutUsBanner}')` }}
       >
         {/* Absolute white backdrop tint overlay layer */}
-        <div className="absolute inset-0 bg-[#FDFDFB]/92 backdrop-blur-[2px] z-0"></div>
+        <div className="absolute inset-0 bg-[#FDFDFB]/85 backdrop-blur-[2px] z-0"></div>
 
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10">
           <div className="flex items-center gap-1.5 justify-center">
@@ -313,8 +275,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* 4. CORE PROGRAMS OVERVIEW */}
-      <section className="py-20 bg-white border-t border-gray-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 bg-cover bg-center bg-no-repeat relative border-t border-gray-200/60"
+        style={{ backgroundImage: `url('${programsBanner}')` }}
+      >
+        {/* Soft white backdrop tint overlay layer for supreme readability */}
+        <div className="absolute inset-0 bg-[#FDFDFB]/90 backdrop-blur-[2px] z-0"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -431,9 +399,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 className="relative h-48 rounded-sm overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-200/10 cursor-pointer group flex flex-col justify-end p-4 text-left font-sans"
               >
                 {/* Visual Action Image Asset Layer (Allows zoom effect safely without scaling the text) */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110 z-0"
-                  style={{ backgroundImage: `url('${sport.bg}')` }}
+                <img 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0"
+                  src={sport.bg}
+                  alt={sport.name}
+                  referrerPolicy="no-referrer"
                 />
 
                 {/* Dark blend overlay mask */}
