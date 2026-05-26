@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%">
+  <defs>
+    <style>
+      .title-text {
+        font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        fill: #141414;
+      }
+      .subtitle-text {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-weight: 700;
+        fill: #1E4DA8;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </defs>
+
+  <!-- Stylized figures group integrated above the word KAYF -->
+  <g transform="translate(10, 0)">
+    <!-- Yellow fig -->
+    <circle cx="240" cy="70" r="18" fill="#FFC627" />
+    <path d="M240 88 C226 120 255 190 270 250 C270 250 274 230 270 180 C265 130 255 105 240 88" fill="#FFC627" />
+
+    <!-- Red fig -->
+    <circle cx="308" cy="38" r="19" fill="#E11D48" />
+    <path d="M308 57 C288 100 280 185 285 280 C285 280 300 235 304 175 C306 125 318 85 308 57" fill="#E11D48" />
+
+    <!-- Blue fig -->
+    <circle cx="392" cy="38" r="19" fill="#1E4DA8" />
+    <path d="M392 57 C370 90 320 210 298 335 C298 335 330 265 362 175 C380 115 396 78 392 57" fill="#1E4DA8" />
+
+    <!-- Green fig -->
+    <circle cx="458" cy="85" r="18" fill="#4CAF3C" />
+    <path d="M458 103 C428 132 360 235 298 375 C298 375 358 295 412 210 C442 160 462 122 458 103" fill="#4CAF3C" />
+  </g>
+
+  <!-- Centered Bold Italic Wordmark text - KAYF -->
+  <text x="490" y="300" text-anchor="middle" font-size="220" class="title-text" letter-spacing="-8">KAYF</text>
+
+  <!-- Official red separator bar -->
+  <line x1="60" y1="322" x2="940" y2="322" stroke="#E11D48" stroke-width="7" stroke-linecap="square" />
+
+  <!-- Tall subtitle - KALGREEN YOUTH FOUNDATION -->
+  <text x="490" y="392" text-anchor="middle" font-size="64" class="subtitle-text" transform="scale(1, 1.1) translate(0, -35)">KALGREEN YOUTH FOUNDATION</text>
+
+  <!-- Official red separator bar -->
+  <line x1="60" y1="422" x2="940" y2="422" stroke="#E11D48" stroke-width="7" stroke-linecap="square" />
+</svg>

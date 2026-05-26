@@ -1,0 +1,6 @@
+{
+  "name": "Kalgreen Youth Foundation",
+  "description": "KAYF is a youth development and sports ecosystem committed to building character, discipline, leadership, and future opportunities through structured sports participation and community engagement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
