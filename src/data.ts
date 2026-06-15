@@ -613,52 +613,53 @@ export const sportsData: SportDetail[] = [
     ctaButton: 'Enquire About Basketball Program'
   },
   {
-    id: 'volleyball',
+    id: 'hockey',
     num: '04',
-    name: 'Volleyball',
-    heroTagline: 'Developing Coordination, Communication, and Team Excellence.',
-    heroSub: 'Volleyball programs designed to encourage active participation, teamwork, athletic growth, and competitive confidence.',
-    overview: 'Volleyball is a dynamic team sport that encourages coordination, communication, agility, teamwork, and strategic thinking. KAYF’s Volleyball Program provides guided training opportunities that help students and athletes improve technical skills, physical conditioning, match understanding, and collaborative performance. The program promotes discipline, confidence, and active sporting participation within a supportive and development-focused environment.',
-    importanceTitle: 'Why Volleyball Matters',
+    name: 'Hockey',
+    heroTagline: 'Teamwork. Strategy. Speed. Resilience.',
+    heroSub: 'Hockey programs designed to instill competitive spirit, physical endurance, technical mastery, and cohesive team strategy.',
+    overview: 'Hockey is a high-octane team sport that demands speed, exceptional hand-eye coordination, physical resilience, and sharp tactical intelligence. KAYF’s Hockey Program delivers structured training pathways that assist players in mastering stickwork, defensive positioning, offensive coordination, and high-intensity conditioning. By highlighting discipline, tactical synchronization, and fair play, we prepare young athletes to face competitive challenges with confidence and mutual trust.',
+    importanceTitle: 'Why Hockey Matters',
     importanceList: [
-      'Requires constant verbal and tactile interaction among teammate rows.',
-      'Develops instant ball placement judgment, high-limb agility, and reaction reflexes.',
-      'Provides a safe, non-contact team sport setup with minimal chance of severe training collisions.',
-      'Builds excellent team synergy, vertical leap capabilities, and lateral court speed.'
+      'Builds extraordinary cardiovascular endurance, lower-body strength, and fast sprint mechanics.',
+      'Develops precision hand-eye coordination, reflex speed, and fluid stick-handling control.',
+      'Teaches intricate team strategy, spatial geometry, and instant transition tactics between defense and offense.',
+      'Fosters elite teamwork, verbal safety cues, and absolute mutual trust on the turf.'
     ],
     focusAreas: [
-      { title: 'Technical Skills Training', description: 'Perfecting ball serve, pass digs, overhead sets, attack spikes, and net blocks.' },
-      { title: 'Team Coordination', description: 'Advising court layout position, rotation structures, set setups, and defense coverage.' },
-      { title: 'Physical Conditioning', description: 'Developing dynamic foot leaps, shoulder flexibility, wrist mechanics, and swift foot movements.' },
-      { title: 'Tactical Understanding', description: 'Reading match flow, opponent gaps, spike angles, block lines, and serve tactics.' },
-      { title: 'Match Preparation', description: 'Six-to-six scrimmage practices, court position habits, and transition defense layouts.' },
-      { title: 'Competitive Participation', description: 'Entering regional school networks, district divisions, and corporate cups.' }
+      { title: 'Stickwork & Ball Control', description: 'Perfecting dribbles, drives, pushes, slap-shots, and clean ball receptions.' },
+      { title: 'Tactical Formations', description: 'Advising positions, defensive presses, penalty corner routines, and wing transitions.' },
+      { title: 'Physical Performance & Speed', description: 'Developing high-end endurance, leg power, agility change-of-direction, and stamina.' },
+      { title: 'Game Intelligence', description: 'Reading opponent positions, creating passing channels, managing match tempos, and field awareness.' },
+      { title: 'Goalkeeping & Defensive Drills', description: 'Specialised reflexes, stance training, sliding saves, and defensive clearances.' },
+      { title: 'Competitive Scrimmaging', description: 'Simulated game pressures, structured intra-cohort league play, and regional tournaments.' }
     ],
     forWhom: [
-      { category: 'For Students', description: 'An amazing, friendly sport building exceptional hand coordination, stamina, and team joy.' },
-      { category: 'For Aspiring Volleyball Players', description: 'Technical development focused on position specialization (setter, liberos, attackers) for state level play.' },
-      { category: 'For Schools', description: 'Establishes cost-effective, high-participation sports environments on outdoor and indoor fields.' },
-      { category: 'For Parents', description: 'Supports physical wellness, agility, social synchronization, and disciplined play in a highly protective framework.' }
+      { category: 'For Students', description: 'An exciting, high-energy team sport that builds superior stamina, motor skills, and robust peer camaraderie.' },
+      { category: 'For Aspiring Players', description: 'High-intensity technical and tactical training pathways aimed at district trials, academy admissions, and competitive club formats.' },
+      { category: 'For Schools', description: 'Creates a legacy of traditional sport excellence, teamwork, and strong school representation in district tournaments.' },
+      { category: 'For Parents', description: 'Ensures active wellness, physical determination, disciplined behavioral codes, and team-oriented growth frameworks.' }
     ],
     approach: [
-      'Learn: Review court spacing, stance, ball touch rules, pass mechanics, and hand-sets.',
-      'Practice: Work on service consistency, setter coordination, and repetitive digging drills.',
-      'Coordinate: Integrate rotation patterns, setter-spiker combinations, and cover rules.',
-      'Participate: Enter cohorts into friendly matchups, cluster events, and structural setups.',
-      'Progress: Deploy elite players into district rosters, specialized camps, and sports schools.'
+      'Learn: Study grip styles, push mechanics, basic dribbling paths, and team positions.',
+      'Practice: Master stick-ball coordination, slap-drills, reception techniques, and sprint runs.',
+      'Coordinate: Learn team setups, defensive presses, passing patterns, and set-plays.',
+      'Compete: Engage in safe scrimmages, inter-club test matches, and developmental friendly tournaments.',
+      'Excel: Prepare talented players for state-level selections, high-performance coaching, and peak athletic levels.'
     ],
     outcomes: [
-      'Match minutes in inter-school and district volleyball competitions.',
-      'Position-specific skill development — setter, attacker, libero — with coach-led role specialisation.',
-      'Documented team-coordination metrics and communication-skill growth.',
-      'Eligibility pathways into district volleyball trials and state selection.',
-      'Improved agility, reflexes, and tactical awareness on the court.',
-      'Stronger discipline, collaboration, and sporting responsibility.'
+      'Excellent stick-handling dexterity, precise passing, and multi-directional speed.',
+      'Strong cardiovascular stamina, lower-body resilience, and tactical field positioning.',
+      'Deep understanding of professional formations, set-pieces, and match situations.',
+      'Clear performance metrics, match logs, and progression reports.',
+      'Direct eligibility pathways for school tournaments, district leagues, and club trials.',
+      'Enhanced discipline, emotional resilience, and deep cooperative spirit.'
     ],
-    ecosystemLink: 'Volleyball participants may continue their development through KAYF inter-school competitions, Pro Coaching pathways, and volleyball-focused Seasonal Camps.',
-    whyThisSport: 'Volleyball isolates contact to ball manipulation over a net, emphasizing ultimate coordination, reflex steps, and verbal camaraderie.',
-    ctaText: 'Build Teamwork, Coordination, and Sporting Confidence Through Volleyball.',
-    ctaButton: 'Enquire About Volleyball Program'
+    ecosystemLink: 'Hockey participants may continue their development through KAYF inter-school competitions, Pro Coaching pathways, and hockey-focused Seasonal Camps.',
+    whyThisSport: 'Hockey combines intense mental strategy with extreme physical speed, demanding high hand-eye acuity, swift reflexes, and absolute self-discipline.',
+    facilityNote: 'Conducted on suitable grass, clay, or turf fields with specialized safety gear including mouthguards, shin guards, and safety helmets for goalkeepers.',
+    ctaText: 'Build Endurance, Precision Stickwork, and Peak Team Synergy Through Hockey.',
+    ctaButton: 'Enquire About Hockey Program'
   },
   {
     id: 'tennis',

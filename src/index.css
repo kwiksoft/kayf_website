@@ -15,8 +15,33 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+html {
+  font-size: 17.5px !important;
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-brand-black);
   background-color: var(--color-brand-offwhite);
 }
+
+/* Ensure all body paragraphs across the site are highly readable */
+p {
+  font-size: 16px !important;
+  line-height: 1.625 !important;
+}
+
+/* Highly readable dropdown option labels inside desktop navigation */
+#app-navbar .absolute div,
+#app-navbar [class*="absolute"] div,
+#app-navbar [class*="absolute"] button {
+  font-size: 15.5px !important;
+}
+
+/* Ensure mobile menu buttons and links are highly readable */
+#mobile-menu button,
+#mobile-menu a,
+#mobile-menu span {
+  font-size: 15.5px !important;
+}
+
