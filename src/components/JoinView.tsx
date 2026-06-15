@@ -31,7 +31,7 @@ export default function JoinView({ onNavigate }: JoinViewProps) {
     'Athletics',
     'Football',
     'Basketball',
-    'Volleyball',
+    'Hockey',
     'Tennis',
     'Pickleball',
     'Kabaddi',

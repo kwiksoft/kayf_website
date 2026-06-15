@@ -21,7 +21,7 @@ const sportsSubItems = [
   { id: 'athletics', label: 'Athletics' },
   { id: 'football', label: 'Football' },
   { id: 'basketball', label: 'Basketball' },
-  { id: 'volleyball', label: 'Volleyball' },
+  { id: 'hockey', label: 'Hockey' },
   { id: 'tennis', label: 'Tennis' },
   { id: 'pickleball', label: 'Pickleball' },
   { id: 'kabaddi', label: 'Kabaddi' },
@@ -104,7 +104,7 @@ export default function Navbar({ currentView, onNavigate }: NavbarProps) {
                   </button>
                   
                   {/* Hover Dropdown menu */}
-                  <div className="absolute left-0 mt-1 w-56 bg-[#FDFDFB] rounded-sm shadow-md border border-gray-200/50 py-1.5 opacity-0 invisible group-hover/prog:opacity-100 group-hover/prog:visible transition-all duration-300 z-50 transform translate-y-1 group-hover/prog:translate-y-0">
+                  <div className="absolute left-0 mt-1 w-64 bg-[#FDFDFB] rounded-sm shadow-md border border-gray-200/50 py-1.5 opacity-0 invisible group-hover/prog:opacity-100 group-hover/prog:visible transition-all duration-300 z-50 transform translate-y-1 group-hover/prog:translate-y-0">
                     {programSubItems.map((sub) => (
                       <div
                         key={sub.id}
@@ -112,7 +112,7 @@ export default function Navbar({ currentView, onNavigate }: NavbarProps) {
                           e.stopPropagation();
                           handleNavClick('programs', sub.id);
                         }}
-                        className="px-4 py-2 hover:bg-brand-sky/40 text-[11px] font-semibold text-brand-black/90 hover:text-brand-blue cursor-pointer transition-colors text-left block"
+                        className="px-4 py-2.5 hover:bg-brand-sky/40 text-sm sm:text-base font-semibold text-brand-black/90 hover:text-brand-blue cursor-pointer transition-colors text-left block"
                       >
                         {sub.label}
                       </div>
@@ -140,7 +140,7 @@ export default function Navbar({ currentView, onNavigate }: NavbarProps) {
                   </button>
                   
                   {/* Hover Dropdown menu */}
-                  <div className="absolute left-0 mt-1 w-52 bg-[#FDFDFB] rounded-sm shadow-md border border-gray-200/50 py-1.5 opacity-0 invisible group-hover/sport:opacity-100 group-hover/sport:visible transition-all duration-300 z-50 transform translate-y-1 group-hover/sport:translate-y-0">
+                  <div className="absolute left-0 mt-1 w-60 bg-[#FDFDFB] rounded-sm shadow-md border border-gray-200/50 py-1.5 opacity-0 invisible group-hover/sport:opacity-100 group-hover/sport:visible transition-all duration-300 z-50 transform translate-y-1 group-hover/sport:translate-y-0">
                     {sportsSubItems.map((sub) => (
                       <div
                         key={sub.id}
@@ -148,7 +148,7 @@ export default function Navbar({ currentView, onNavigate }: NavbarProps) {
                           e.stopPropagation();
                           handleNavClick('sports', sub.id);
                         }}
-                        className="px-4 py-2 hover:bg-brand-sky/40 text-[11px] font-semibold text-brand-black/90 hover:text-brand-blue cursor-pointer transition-colors text-left block"
+                        className="px-4 py-2.5 hover:bg-brand-sky/40 text-sm sm:text-base font-semibold text-brand-black/90 hover:text-brand-blue cursor-pointer transition-colors text-left block"
                       >
                         {sub.label}
                       </div>
@@ -194,7 +194,7 @@ export default function Navbar({ currentView, onNavigate }: NavbarProps) {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="sm:hidden bg-[#FDFDFB] border-t border-gray-200/80 shadow-md px-4 pt-2 pb-6 space-y-1.5 absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto">
+        <div id="mobile-menu" className="sm:hidden bg-[#FDFDFB] border-t border-gray-200/80 shadow-md px-4 pt-2 pb-6 space-y-1.5 absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto">
           {navItems.map((item) => {
             const isActive = currentView === item.id;
 

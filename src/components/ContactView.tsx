@@ -124,6 +124,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
                   <div>
                     <h4 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest">Phone Line</h4>
                     <p className="text-xs font-mono text-gray-800 mt-1 font-semibold">+91 96000 47713</p>
+                    <p className="text-xs font-mono text-gray-800 font-semibold">+91 94449 79482</p>
                   </div>
                 </div>
  
@@ -133,8 +134,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
                   </div>
                   <div>
                     <h4 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest">Email Coordinates</h4>
-                    <p className="text-xs font-mono text-gray-800 mt-1 font-semibold">info@kayf.co.in</p>
-                    <p className="text-xs font-mono text-gray-800 font-semibold">support@kayf.co.in</p>
+                    <p className="text-xs font-mono text-gray-800 mt-1 font-semibold">greenglobalsportsacademy@gmail.com</p>
                   </div>
                 </div>
  
@@ -142,15 +142,26 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
                   <div className="w-9 h-9 bg-brand-sky border border-brand-blue/10 text-brand-blue flex items-center justify-center flex-shrink-0 mt-0.5 rounded-sm">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <div>
+                  <div className="space-y-3">
                     <h4 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest">Address Coordination</h4>
-                    <p className="text-xs text-gray-650 leading-relaxed mt-1">
-                      Kalgreen Youth Foundation (KAYF)<br />
-                      Chennai, Tamil Nadu, India
-                    </p>
-                    <p className="text-[9px] text-gray-500 mt-1 font-mono uppercase tracking-wider font-semibold">
-                      [Office Address &mdash; to be provided by Mr. Kalairajan]
-                    </p>
+                    
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-[#72bf44] uppercase tracking-wider font-mono">Registered Office:</p>
+                      <p className="text-xs text-gray-650 leading-relaxed font-sans">
+                        Gowri Tower, No. 4, Canal Road,<br />
+                        Venkateswara Nagar, Korattur,<br />
+                        Chennai - 600076.
+                      </p>
+                    </div>
+
+                    <div className="space-y-1 pt-1.5 border-t border-gray-150">
+                      <p className="text-[10px] font-bold text-[#72bf44] uppercase tracking-wider font-mono">Administration Office:</p>
+                      <p className="text-xs text-gray-650 leading-relaxed font-sans">
+                        Samyuktha Apartments, No. 89, Flat S1,<br />
+                        Doctor's Colony, IV th Cross Street,<br />
+                        Jayanti Nagar, Kolathur, Chennai - 600099.
+                      </p>
+                    </div>
                   </div>
                 </div>
  
@@ -190,7 +201,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
                   ].map((cat, idx) => (
                     <div key={idx} className="space-y-0.5 text-xs">
                       <p className="font-semibold text-brand-black">{cat.title}</p>
-                      <p className="text-gray-500 leading-relaxed">{cat.desc}</p>
+                      <p className="text-gray-550 leading-relaxed">{cat.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -198,43 +209,23 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
             </div>
  
           </div>
-        </div>
-      </section>
 
-      {/* 3. FIND US GOOGLE MAP VIEW */}
-      <section className="py-20 bg-transparent relative z-10 border-y border-gray-150/60 text-left font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="space-y-4 relative z-10">
-            <h3 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest">Location &amp; Map Coordinates</h3>
-            <p className="text-xs text-gray-550 max-w-xl leading-relaxed">
-              Google Map location and navigation support will be integrated upon final office address confirmation. Below represents our regional operations centroid.
-            </p>
-            
-            {/* Styled Map Representation Card */}
-            <div className="h-64 sm:h-96 rounded-sm bg-slate-50/90 border border-gray-200 relative flex items-center justify-center overflow-hidden z-10">
-              {/* Symmetrical abstract graphic overlay mimicking clean city roads grid */}
-              <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#1E4DA8_1px,transparent_1px)] [background-size:16px_16px]"></div>
-              <div className="absolute inset-0 z-0">
-                <svg viewBox="0 0 800 400" className="w-full h-full text-brand-blue/15">
-                  <path d="M 0 50 L 800 50 M 0 150 L 800 150 M 0 250 L 800 250 M 0 350 L 800 350" stroke="currentColor" strokeWidth="1" />
-                  <path d="M 100 0 L 100 400 M 300 0 L 300 400 M 500 0 L 500 400 M 700 0 L 700 400" stroke="currentColor" strokeWidth="1" />
-                  <path d="M 50 0 L 750 400" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" />
-                  <circle cx="400" cy="200" r="100" fill="none" stroke="currentColor" strokeWidth="1" />
-                </svg>
-              </div>
-
-              {/* Pin identifier mark */}
-              <div className="relative z-10 text-center space-y-3 bg-white px-6 py-5 rounded-sm border border-gray-200 shadow-md max-w-sm mx-4">
-                <MapPin className="w-5 h-5 text-brand-sandal mx-auto" />
-                <h4 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest">Chennai Centroid Operations</h4>
-                <p className="text-[10px] text-gray-500 leading-relaxed font-sans">
-                  Advisory setups and multi-sports program coordination throughout Tamil Nadu. Maps navigation fully aligned post-administrative signoff.
-                </p>
-              </div>
-            </div>
+          {/* Full-width Map Layout Wrapper */}
+          <div className="w-full bg-white p-4 rounded-sm border border-gray-200 shadow-sm mt-8">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.0167647617172!2d80.20059857412292!3d13.127735911437824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52654d2fdb7fc5%3A0x564abeaeb5b690e8!2sSamyuktha%20apartments!5e1!3m2!1sen!2sin!4v1781276061365!5m2!1sen!2sin"
+              className="w-full h-[400px] rounded-sm border-0"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="KAYF Administration Office Location"
+            />
           </div>
+
         </div>
       </section>
+
+
 
       {/* 4. HOW WE RESPOND (5-Stage Communication Commitment) */}
       <section className="py-20 bg-transparent relative z-10 border-b border-gray-150/60 text-left font-sans">
@@ -300,7 +291,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
               <AlertCircle className="w-8 h-8 text-rose-700 mx-auto" />
               <h4 className="font-display font-semibold text-base text-rose-700 uppercase tracking-wider">Submission Failed</h4>
               <p className="text-xs text-rose-800 leading-relaxed">
-                Something went wrong while sending your message. Please try again, or reach us directly at info@kayf.co.in.
+                Something went wrong while sending your message. Please try again, or reach us directly at greenglobalsportsacademy@gmail.com.
               </p>
               <button
                 onClick={() => setSubmitStatus(null)}
@@ -412,31 +403,7 @@ export default function ContactView({ onNavigate }: ContactViewProps) {
         </div>
       </section>
 
-      {/* 6. LIVE INTERACTIVE GOOGLE MAP BANNER */}
-      <section className="w-full bg-transparent relative z-10 py-12 border-t border-gray-150/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-white/95 p-6 sm:p-8 rounded-sm border border-gray-200 shadow-xl space-y-4 relative z-10 max-w-4xl mx-auto text-left">
-            <h3 className="font-sans font-semibold text-[11px] text-brand-black uppercase tracking-widest flex items-center gap-2">
-              <MapPin className="w-4.5 h-4.5 text-brand-sandal" /> Interactive Location Map
-            </h3>
-            <p className="text-xs text-gray-500 max-w-xl leading-relaxed">
-              Use the live map interface below to locate our central regional coordination coordinates in Chennai, Tamil Nadu.
-            </p>
-            <div className="w-full overflow-hidden rounded-sm border border-gray-200 shadow-md">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.38518!2d80.21045!3d13.01115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671375555555%3A0x0!2zMTPCsDAwJzQwLjEiTiA4MMKwMTInMzcuNiJF!5e0!3m2!1sen!2sin!4v1716710000000"
-                width="100%" 
-                height="400" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-sm shadow-inner border border-gray-200/60"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

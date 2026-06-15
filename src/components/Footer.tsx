@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Award, CheckCircle } from 'lucide-react';
 
-import kayfLogo from '../assets/images/KAYF_Logo.png';
+import footerLogo from '../assets/images/KAYF_Logo_footer.png';
 
 interface FooterProps {
   onNavigate: (view: string) => void;
@@ -14,15 +14,15 @@ export default function Footer({ onNavigate }: FooterProps) {
     <footer id="app-footer" className="bg-brand-black text-gray-400 font-sans border-t border-gray-800/60">
       {/* Upper Footer section */}
       <div className="max-w-7xl mx-auto pt-12 pb-6 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12">
           {/* Brand Identity column */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-4">
             <div className="flex items-center cursor-pointer" onClick={() => onNavigate('home')}>
               <div className="relative flex-shrink-0 flex items-center justify-center">
                 <img 
-                  src={kayfLogo} 
+                  src={footerLogo} 
                   alt="KAYF Logo" 
-                  className="h-20 w-auto object-contain select-none max-h-none"
+                  className="h-16 w-auto object-contain mb-4"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -40,8 +40,8 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* Quick links column */}
-          <div className="space-y-4">
-            <h3 className="font-sans font-semibold text-white tracking-widest uppercase text-xs">Navigation</h3>
+          <div className="space-y-4 lg:col-span-2">
+            <h3 className="font-sans text-white font-semibold tracking-wider uppercase text-xs">Navigation</h3>
             <ul className="space-y-2 text-xs">
               <li>
                 <button onClick={() => onNavigate('home')} className="hover:text-brand-sandal transition-colors text-left cursor-pointer font-sans">
@@ -72,8 +72,8 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* Programs Covered inline Column */}
-          <div className="space-y-4">
-            <h3 className="font-sans font-semibold text-white tracking-widest uppercase text-xs">Core Programs</h3>
+          <div className="space-y-4 lg:col-span-2">
+            <h3 className="font-sans text-white font-semibold tracking-wider uppercase text-xs">Core Programs</h3>
             <ul className="space-y-2 text-xs text-gray-400 font-sans">
               <li>&middot; In-School Sports Development</li>
               <li>&middot; Pro Coaching Programs</li>
@@ -85,26 +85,34 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           {/* Contact coordinates column */}
-          <div className="space-y-4">
-            <h3 className="font-sans font-semibold text-white tracking-widest uppercase text-xs">Contact Details</h3>
+          <div className="space-y-4 lg:col-span-4">
+            <h3 className="font-sans text-white font-semibold tracking-wider uppercase text-xs">Contact Details</h3>
             <ul className="space-y-3 text-xs">
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 font-sans">
                 <Phone className="w-4 h-4 text-brand-sandal flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 font-mono tracking-wide">+91 96000 47713</span>
-              </li>
-              <li className="flex items-start space-x-3">
-                <Mail className="w-4 h-4 text-brand-sandal flex-shrink-0 mt-0.5" />
-                <div className="flex flex-col space-y-0.5">
-                  <a href="mailto:info@kayf.co.in" className="text-gray-300 font-mono hover:text-white transition-colors">info@kayf.co.in</a>
-                  <a href="mailto:support@kayf.co.in" className="text-gray-300 font-mono hover:text-white transition-colors">support@kayf.co.in</a>
+                <div className="flex flex-col space-y-1">
+                  <span className="text-gray-300 font-mono tracking-wide">+91 96000 47713</span>
+                  <span className="text-gray-300 font-mono tracking-wide">+91 94449 79482</span>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex items-start space-x-3 font-sans">
+                <Mail className="w-4 h-4 text-brand-sandal flex-shrink-0 mt-0.5" />
+                <div className="flex flex-col space-y-0.5">
+                  <a href="mailto:greenglobalsportsacademy@gmail.com" className="text-gray-300 font-mono hover:text-white transition-colors whitespace-nowrap">greenglobalsportsacademy@gmail.com</a>
+                </div>
+              </li>
+              <li className="flex items-start space-x-3 font-sans">
                 <MapPin className="w-4 h-4 text-brand-sandal flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300 leading-relaxed font-sans text-xs">
-                  Kalgreen Youth Foundation (KAYF)<br />
-                  Chennai, Tamil Nadu, India
-                </span>
+                <div className="flex flex-col space-y-2 text-xs">
+                  <span className="text-gray-300 leading-relaxed font-sans">
+                    <strong>Registered Office:</strong><br />
+                    Gowri Tower, No. 4, Canal Road, Venkateswara Nagar, Korattur, Chennai 600076.
+                  </span>
+                  <span className="text-gray-300 leading-relaxed font-sans">
+                    <strong>Administration Office:</strong><br />
+                    Samyuktha Apartments, No. 89, Flat S1, Doctor's Colony, IV th Cross Street, Jayanti Nagar, Kolathur, Chennai 600099.
+                  </span>
+                </div>
               </li>
             </ul>
           </div>

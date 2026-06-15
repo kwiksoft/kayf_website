@@ -3,12 +3,9 @@ import { ArrowRight, Trophy, Users, ShieldCheck, Zap, Sparkles, Building, Landma
 import { motion } from 'motion/react';
 import targetHeroBanner from '../assets/images/Hero-Section.png';
 import footballImg from '../assets/images/football.png';
-import volleyballImg from './volleyball-v2.png';
 import kabaddiImg from './kabaddi-v2.png';
 import silambamImg from './silambam-v2.png';
 import coachesImg from '../assets/images/Coaches.png';
-import aboutUsBanner from './About_us.png';
-import programsBanner from './Programs.png';
 
 interface HomeViewProps {
   onNavigate: (view: string, detailId?: string) => void;
@@ -111,7 +108,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
     athletics: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=500&q=80',
     football: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80',
     basketball: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500&q=80',
-    volleyball: 'https://images.unsplash.com/photo-1592656094267-764a45068526?auto=format&fit=crop&w=500&q=80',
+    hockey: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=500&q=80',
     tennis: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=500&q=80',
     pickleball: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=500&q=80',
     kabaddi: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=500&q=80',
@@ -138,10 +135,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       bg: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500&q=80'
     },
     { 
-      id: 'volleyball', 
-      name: 'Volleyball', 
-      tag: 'Coordination & Sets', 
-      bg: volleyballImg
+      id: 'hockey', 
+      name: 'Hockey', 
+      tag: 'Speed & Resilience', 
+      bg: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=500&q=80'
     },
     { 
       id: 'tennis', 
@@ -182,6 +179,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           className="absolute inset-0 w-full h-full object-cover z-0" 
         />
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: -25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-5 max-w-md sm:max-w-lg md:max-w-2xl text-left"
+          >
+            
+          </motion.div>
+
           {/* Live Action buttons floating responsively on top of the lower-left side over the grass area */}
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -209,15 +215,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       {/* 2. INSTITUTIONAL STATEMENT (Sports Beyond Competition) */}
       <section 
         className="py-16 bg-cover bg-center bg-no-repeat relative border-y border-gray-250/60"
-        style={{ backgroundImage: `url('${aboutUsBanner}')` }}
+        style={{ backgroundImage: "url('/About_us.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         {/* Absolute white backdrop tint overlay layer */}
         <div className="absolute inset-0 bg-[#FDFDFB]/85 backdrop-blur-[2px] z-0"></div>
 
         <div className="max-w-4xl mx-auto px-4 text-center space-y-4 relative z-10">
           <div className="flex items-center gap-1.5 justify-center">
-            <div className="w-5 h-[1px] bg-brand-sandal"></div>
-            <span className="text-[10px] font-bold text-brand-sandal uppercase tracking-widest">KAYF Core Philosophy</span>
+            <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest">KAYF Core Philosophy</span>
           </div>
           <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-blue tracking-tight">
             Sports Beyond Competition
@@ -244,7 +249,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             transition={{ duration: 0.6 }}
             className="text-left max-w-3xl space-y-3 mb-12"
           >
-            <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest font-mono">Strategic Pillars</span>
+            <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest font-mono">Strategic Pillars</span>
             <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-black tracking-tight leading-tight">
               Encouraging Participation. Supporting Growth. Building Communities.
             </h2>
@@ -277,7 +282,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       {/* 4. CORE PROGRAMS OVERVIEW */}
       <section 
         className="py-20 bg-cover bg-center bg-no-repeat relative border-t border-gray-200/60"
-        style={{ backgroundImage: `url('${programsBanner}')` }}
+        style={{ backgroundImage: "url('/Programs.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         {/* Soft white backdrop tint overlay layer for supreme readability */}
         <div className="absolute inset-0 bg-[#FDFDFB]/90 backdrop-blur-[2px] z-0"></div>
@@ -291,14 +296,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             className="flex flex-col md:flex-row md:items-end justify-between mb-12"
           >
             <div className="text-left max-w-2xl space-y-2">
-              <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest font-mono">Systematic Modules</span>
+              <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest font-mono">Systematic Modules</span>
               <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-black tracking-tight">
                 Structured Programs for Youth and Sports Development
               </h2>
             </div>
             <button
               onClick={() => onNavigate('programs')}
-              className="mt-4 md:mt-0 font-display font-bold text-xs uppercase text-brand-blue hover:text-brand-blue/80 flex items-center space-x-1 cursor-pointer"
+              className="mt-4 md:mt-0 font-display font-bold text-xs uppercase text-[#72bf44] hover:text-[#72bf44]/80 flex items-center space-x-1 cursor-pointer"
             >
               <span>Explore All Programs</span>
               <ArrowRight className="w-4 h-4" />
@@ -314,7 +319,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 initial={{ opacity: 0, scale: 0.92 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
-                className="relative bg-cover bg-center rounded-sm border border-gray-200/10 hover:border-brand-sandal transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer overflow-hidden flex flex-col justify-between h-64 group"
+                className="relative bg-cover bg-center rounded-sm border border-gray-200/10 hover:border-[#72bf44] transition-all duration-300 shadow-sm hover:shadow-md cursor-pointer overflow-hidden flex flex-col justify-between h-64 group"
                 style={{ backgroundImage: `url('${prog.bg}')` }}
               >
                 {/* Smooth dark overlay gradient */}
@@ -323,19 +328,19 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <div className="relative z-10 space-y-3 p-6 flex flex-col justify-between h-full w-full">
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
-                      <span className="font-mono text-[9px] text-brand-sandal font-bold tracking-widest uppercase">{`PROGRAM ${prog.num}`}</span>
+                      <span className="font-mono text-[9px] text-[#72bf44] font-bold tracking-widest uppercase">{`PROGRAM ${prog.num}`}</span>
                       <span className="text-[10px] text-white/50 font-mono uppercase tracking-wider">KAYF</span>
                     </div>
-                    <h3 className="font-display font-semibold text-base text-white group-hover:text-brand-sandal transition-colors leading-snug">
+                    <h3 className="font-display font-semibold text-base text-white group-hover:text-[#72bf44] transition-colors leading-snug">
                       {prog.name}
                     </h3>
                     <p className="text-xs text-white/80 leading-relaxed line-clamp-3 font-sans">
                       {prog.desc}
                     </p>
                   </div>
-                  <div className="pt-2 text-[10px] font-bold text-white flex items-center space-x-1 uppercase group-hover:text-brand-sandal transition-colors tracking-wider">
+                  <div className="pt-2 text-[10px] font-bold text-white flex items-center space-x-1 uppercase group-hover:text-[#72bf44] transition-colors tracking-wider">
                     <span>View Details</span>
-                    <ArrowRight className="w-3 h-3 text-white group-hover:text-brand-sandal" />
+                    <ArrowRight className="w-3 h-3 text-white group-hover:text-[#72bf44]" />
                   </div>
                 </div>
               </motion.div>
@@ -380,7 +385,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             transition={{ duration: 0.6 }}
             className="text-left max-w-3xl space-y-3 mb-12"
           >
-            <span className="text-[10px] font-bold text-brand-sandal uppercase tracking-widest block font-mono">Multi-Sport Development</span>
+            <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest block font-mono">Multi-Sport Development</span>
             <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-black tracking-tight">
               Multi-Sport Development Pathways
             </h2>
@@ -410,13 +415,13 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/55 to-black/25 group-hover:from-black/95 group-hover:via-black/65 transition-all duration-300 z-10"></div>
 
                 <div className="relative z-20 space-y-1">
-                  <h3 className="font-display font-semibold text-sm text-white group-hover:text-brand-sandal transition-colors tracking-tight leading-tight">
+                  <h3 className="font-display font-semibold text-sm text-white group-hover:text-[#72bf44] transition-colors tracking-tight leading-tight">
                     {sport.name}
                   </h3>
                   <p className="text-[9px] text-white/80 font-mono tracking-widest uppercase font-bold">
                     {sport.tag}
                   </p>
-                  <div className="pt-1.5 flex items-center text-[9px] text-white/90 group-hover:text-brand-sandal font-bold uppercase tracking-widest transition-colors leading-none">
+                  <div className="pt-1.5 flex items-center text-[9px] text-white/90 group-hover:text-[#72bf44] font-bold uppercase tracking-widest transition-colors leading-none">
                     <span>View Detail</span>
                     <span className="ml-1">&rarr;</span>
                   </div>
@@ -440,8 +445,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       <section className="py-20 bg-brand-black text-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
           <div className="flex items-center gap-1.5 justify-center">
-            <div className="w-5 h-[1px] bg-brand-sandal"></div>
-            <span className="text-[10px] font-bold text-brand-sandal uppercase tracking-widest block font-mono">The Foundation Stone Engagement</span>
+            <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest block font-mono">The Foundation Stone Engagement</span>
           </div>
           <h2 className="font-display font-medium text-2xl sm:text-3xl text-white italic tracking-tight">
             &ldquo;Sports That Shape People, Not Just Players.&rdquo;
@@ -452,17 +456,17 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
             <div className="bg-white/5 p-6 rounded-sm border border-white/10 text-left space-y-2">
-              <span className="text-brand-sandal text-lg font-bold font-mono">01. Strength</span>
+              <span className="text-[#72bf44] text-lg font-bold font-mono">01. Strength</span>
               <p className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Physical wellness</p>
               <p className="text-xs text-gray-400 leading-relaxed">Developing agile movement templates, structural fitness, and sports conditioning baselines.</p>
             </div>
             <div className="bg-white/5 p-6 rounded-sm border border-white/10 text-left space-y-2">
-              <span className="text-brand-sandal text-lg font-bold font-mono">02. Discipline</span>
+              <span className="text-[#72bf44] text-lg font-bold font-mono">02. Discipline</span>
               <p className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Focus &amp; Respect</p>
               <p className="text-xs text-gray-400 leading-relaxed">Upholding strict schedules, training consistency, and extreme respect toward coaches and peers.</p>
             </div>
             <div className="bg-white/5 p-6 rounded-sm border border-white/10 text-left space-y-2">
-              <span className="text-brand-sandal text-lg font-bold font-mono">03. Culture</span>
+              <span className="text-[#72bf44] text-lg font-bold font-mono">03. Culture</span>
               <p className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Grounded roots</p>
               <p className="text-xs text-gray-400 leading-relaxed">Honoring Tamil heritage through sporting modules such as the traditional stick formulation of Silambam.</p>
             </div>
@@ -476,7 +480,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Context details */}
             <div className="lg:col-span-7 text-left space-y-6">
-              <span className="inline-flex items-center px-2.5 py-1 rounded-sm text-[10px] font-bold tracking-wider bg-brand-blue/10 text-brand-blue uppercase font-sans">
+              <span className="inline-flex items-center px-2.5 py-1 rounded-sm text-[10px] font-bold tracking-wider bg-[#72bf44]/10 text-[#72bf44] uppercase font-sans">
                 Institutional Collaboration
               </span>
               <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-black tracking-tight leading-snug">
@@ -554,7 +558,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             transition={{ duration: 0.6 }}
             className="space-y-2 text-center max-w-2xl mx-auto"
           >
-            <span className="text-[10px] font-bold text-brand-blue uppercase tracking-widest font-mono">Onboarding Lifecycle</span>
+            <span className="text-[10px] font-bold text-[#72bf44] uppercase tracking-widest font-mono">Onboarding Lifecycle</span>
             <h2 className="font-display font-semibold text-2xl sm:text-3xl text-brand-black tracking-tight">
               A Simple and Organised Process
             </h2>
@@ -562,22 +566,22 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="space-y-3 text-left p-5 bg-white rounded-sm border border-gray-200 relative">
-              <span className="font-mono text-xl font-bold text-brand-sandal absolute right-4 top-2">/01</span>
+              <span className="font-mono text-xl font-bold text-[#72bf44] absolute right-4 top-2">/01</span>
               <h3 className="font-display font-bold text-xs uppercase tracking-wide text-brand-black mt-2">1. Submit Interest</h3>
               <p className="text-xs text-gray-500 leading-relaxed">Select the appropriate role category (Student, Coach, School, Sponsor) and fill our dynamic enquiry form.</p>
             </div>
             <div className="space-y-3 text-left p-5 bg-white rounded-sm border border-gray-200 relative">
-              <span className="font-mono text-xl font-bold text-brand-sandal absolute right-4 top-2">/02</span>
+              <span className="font-mono text-xl font-bold text-[#72bf44] absolute right-4 top-2">/02</span>
               <h3 className="font-display font-bold text-xs uppercase tracking-wide text-brand-black mt-2">2. Initial Alignment</h3>
               <p className="text-xs text-gray-500 leading-relaxed">The KAYF administration team filters request criteria and logs introductory coordination contact with you within 48 hours.</p>
             </div>
             <div className="space-y-3 text-left p-5 bg-white rounded-sm border border-gray-200 relative">
-              <span className="font-mono text-xl font-bold text-brand-sandal absolute right-4 top-2">/03</span>
+              <span className="font-mono text-[#72bf44] text-xl font-bold absolute right-4 top-2">/03</span>
               <h3 className="font-display font-bold text-xs uppercase tracking-wide text-brand-black mt-2">3. Strategic Planning</h3>
               <p className="text-xs text-gray-500 leading-relaxed">We customize training blocks, site templates, certified coach rosters, or CSR parameters matching your parameters.</p>
             </div>
             <div className="space-y-3 text-left p-5 bg-white rounded-sm border border-gray-200 relative">
-              <span className="font-mono text-xl font-bold text-brand-sandal absolute right-4 top-2">/04</span>
+              <span className="font-mono text-xl font-bold text-[#72bf44] absolute right-4 top-2">/04</span>
               <h3 className="font-display font-bold text-xs uppercase tracking-wide text-brand-black mt-2">4. Onboarding Launch</h3>
               <p className="text-xs text-gray-500 leading-relaxed">Active deployment commences. Structured physical metrics trackers are logged to assure developmental goals.</p>
             </div>

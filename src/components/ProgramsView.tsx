@@ -2,7 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Award, Target, FileText, CheckCircle, HelpCircle, ArrowRight, ShieldAlert } from 'lucide-react';
 import { programsData } from '../data';
 import { ProgramDetail } from '../types';
-import programsBanner from './Programs.png';
+
+import inschoolImg from '../assets/images/Programs/inschool.png';
+import proCoachingImg from '../assets/images/Programs/Pro-Coaching.png';
+import sportsArenaImg from '../assets/images/Programs/Sports-Arena-Development.png';
+import coachDevelopmentImg from '../assets/images/Programs/Coach-Development.png';
+import seasonalCampsImg from '../assets/images/Programs/Seasonal-Camps.png';
+import eventsCompetitionsImg from '../assets/images/Programs/events-competitions.png';
+
+const programImages: Record<string, string> = {
+  'in-school-training': inschoolImg,
+  'pro-coaching': proCoachingImg,
+  'events-competitions': eventsCompetitionsImg,
+  'coach-development': coachDevelopmentImg,
+  'seasonal-camps': seasonalCampsImg,
+  'sports-arena-services': sportsArenaImg,
+};
 
 interface ProgramsViewProps {
   onNavigate: (view: string, detailId?: string) => void;
@@ -50,7 +65,7 @@ export default function ProgramsView({ onNavigate, initialSelectedId }: Programs
       {/* SECTION HERO */}
       <section 
         className="relative bg-cover bg-center pt-24 pb-10 sm:pt-28 sm:pb-12 border-b border-gray-150/60 flex items-center justify-center overflow-hidden font-sans z-10"
-        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${programsBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Programs.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
@@ -144,6 +159,16 @@ export default function ProgramsView({ onNavigate, initialSelectedId }: Programs
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans">
                   {activeProgram.overview}
                 </p>
+              </div>
+
+              {/* Dynamic Program Banner Image */}
+              <div className="w-full relative z-10">
+                <img 
+                  src={programImages[selectedId]} 
+                  alt={`${activeProgram.name} Overview Banner`} 
+                  className="w-full h-[240px] sm:h-[320px] object-cover rounded-sm my-6 shadow-sm border border-gray-100"
+                  referrerPolicy="no-referrer"
+                />
               </div>
 
               {/* Why This Program Matters (with Growth Green Indicators) */}

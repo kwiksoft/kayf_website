@@ -1,7 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Target, Heart, Eye, Users, ArrowRight, Award, UserCheck, HelpCircle } from 'lucide-react';
 import { valuesData } from '../data';
-import aboutUsBanner from './About_us.png';
 
 interface AboutViewProps {
   onNavigate: (view: string) => void;
@@ -44,7 +43,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       {/* HEADER HERO */}
       <section 
         className="relative bg-cover bg-center pt-24 pb-10 sm:pt-28 sm:pb-12 border-b border-gray-150/60 flex items-center justify-center overflow-hidden"
-        style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${aboutUsBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/About_us.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center space-y-3">
@@ -97,7 +96,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   {whatWeDoList.map((item, index) => (
                     <li key={index} className="flex items-center space-x-3 text-xs text-gray-700">
                       <Award className="w-4 h-4 text-brand-blue flex-shrink-0" />
-                      <span>={item}</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -142,7 +141,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   <Target className="w-4.5 h-4.5" />
                 </div>
                 <h3 className="font-display font-semibold text-xl text-brand-black">Our Mission</h3>
-                <p className="text-[10px] text-brand-sandal font-mono tracking-widest uppercase font-bold">KAYF Commits To:</p>
+                <p className="text-[10px] text-[#72bf44] font-mono tracking-widest uppercase font-bold">KAYF Commits To:</p>
                 
                 <ul className="space-y-2.5 pt-1">
                   {missionPoints.map((pt, idx) => (
@@ -173,9 +172,9 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             {valuesData.map((val, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-[#FDFDFB] rounded-sm border border-gray-200 text-left space-y-3 group hover:border-brand-sandal transition-colors"
+                className="p-6 bg-[#FDFDFB] rounded-sm border border-gray-200 text-left space-y-3 group hover:border-[#72bf44] transition-colors"
               >
-                <div className="w-9 h-9 bg-brand-sandal/10 text-brand-sandal rounded-sm flex items-center justify-center font-display font-bold text-xs border border-brand-sandal/25">
+                <div className="w-9 h-9 bg-[#72bf44]/10 text-[#72bf44] rounded-sm flex items-center justify-center font-display font-bold text-xs border border-[#72bf44]/25">
                   {`0${idx + 1}`}
                 </div>
                 <h3 className="font-display font-semibold text-base text-brand-black">
@@ -209,7 +208,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               { title: '5. Strengthen', desc: 'Build long-standing sporting heritages and strong social community impacts through sustained initiatives.' }
             ].map((stage, sIdx) => (
               <div key={sIdx} className="bg-white p-5 rounded-sm border border-gray-200 space-y-2">
-                <span className="text-[10px] font-bold text-brand-sandal font-mono uppercase tracking-widest">{`STAGE 0${sIdx+1}`}</span>
+                <span className="text-[10px] font-bold text-[#72bf44] font-mono uppercase tracking-widest">{`STAGE 0${sIdx+1}`}</span>
                 <h4 className="font-display font-semibold text-sm text-brand-black">{stage.title}</h4>
                 <p className="text-[10px] text-gray-500 leading-relaxed">{stage.desc}</p>
               </div>
@@ -292,12 +291,32 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             ))}
           </div>
 
-          {/* Note on organizational status */}
-          <div className="p-4 bg-amber-50 rounded-sm border border-amber-200 text-xs text-amber-800 leading-relaxed flex items-start space-x-2.5">
-            <HelpCircle className="w-4 h-4 flex-shrink-0 text-amber-700 mt-0.5" />
-            <p>
-              <strong>Note on Organisational Status:</strong> KAYF’s full organisational registration and operational structure will be published on this page once final administrative confirmation is in place.
-            </p>
+          {/* Official Corporate Tracking Details */}
+          <div className="mt-8 p-6 bg-white rounded-sm border border-gray-250 text-left space-y-4 shadow-sm">
+            <div className="flex items-center space-x-2 border-b border-gray-150 pb-2.5">
+              <span className="w-2.5 h-2.5 rounded-none bg-[#72bf44]"></span>
+              <h4 className="font-display font-semibold text-xs uppercase tracking-wider text-brand-black">Official Foundation Details &amp; Registration Offices</h4>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-1">
+              <div className="space-y-1.5 p-4 bg-[#FDFDFB] rounded border border-gray-200">
+                <span className="text-[10px] font-bold text-[#72bf44] font-mono uppercase tracking-widest">Registered Office Address</span>
+                <p className="text-xs text-gray-750 leading-relaxed font-sans">
+                  <strong>Kalgreen Youth Foundation</strong><br />
+                  Gowri Tower, No. 4, Canal Road,<br />
+                  Venkateswara Nagar, Korattur,<br />
+                  Chennai - 600076, Tamil Nadu, India.
+                </p>
+              </div>
+              <div className="space-y-1.5 p-4 bg-[#FDFDFB] rounded border border-gray-200">
+                <span className="text-[10px] font-bold text-[#72bf44] font-mono uppercase tracking-widest">Administration Office Address</span>
+                <p className="text-xs text-gray-750 leading-relaxed font-sans">
+                  <strong>Kalgreen Youth Foundation</strong><br />
+                  Samyuktha Apartments, No. 89, Flat S1,<br />
+                  Doctor's Colony, IV th Cross Street,<br />
+                  Jayanti Nagar, Kolathur, Chennai - 600099.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

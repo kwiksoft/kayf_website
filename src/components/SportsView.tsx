@@ -3,6 +3,26 @@ import { ChevronRight, Award, MapPin, UserCheck, ShieldAlert, ArrowRight, Check 
 import { sportsData } from '../data';
 import { SportDetail } from '../types';
 
+import athleticsImg from '../assets/images/Sports/Athletics.png';
+import footballImg from '../assets/images/Sports/Football.png';
+import basketballImg from '../assets/images/Sports/Basketball.png';
+import hockeyImg from '../assets/images/Sports/Hockey.png';
+import tennisImg from '../assets/images/Sports/Tennis.png';
+import pickleballImg from '../assets/images/Sports/Pickleball.png';
+import kabaddiImg from '../assets/images/Sports/Kabaddi.png';
+import silambamImg from '../assets/images/Sports/Silambam.png';
+
+const sportImages: Record<string, string> = {
+  athletics: athleticsImg,
+  football: footballImg,
+  basketball: basketballImg,
+  hockey: hockeyImg,
+  tennis: tennisImg,
+  pickleball: pickleballImg,
+  kabaddi: kabaddiImg,
+  silambam: silambamImg,
+};
+
 interface SportsViewProps {
   onNavigate: (view: string, detailId?: string) => void;
   initialSelectedId?: string;
@@ -145,6 +165,16 @@ export default function SportsView({ onNavigate, initialSelectedId }: SportsView
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-sans font-light">
                   {activeSport.overview}
                 </p>
+              </div>
+
+              {/* Dynamic Sport Action Banner Image */}
+              <div className="w-full relative z-10">
+                <img 
+                  src={sportImages[selectedId]} 
+                  alt={`${activeSport.name} Action Banner`} 
+                  className="w-full h-[240px] sm:h-[320px] object-cover rounded-sm my-6 shadow-sm border border-gray-100"
+                  referrerPolicy="no-referrer"
+                />
               </div>
 
               {/* What makes this sport unique */}
