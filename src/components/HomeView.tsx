@@ -3,9 +3,13 @@ import { ArrowRight, Trophy, Users, ShieldCheck, Zap, Sparkles, Building, Landma
 import { motion } from 'motion/react';
 import targetHeroBanner from '../assets/images/Hero-Section.png';
 import footballImg from '../assets/images/football.png';
+import hockeyImg from '../assets/images/Hockey-index.png';
+import pickleballImg from '../assets/images/pickleball-index.png';
 import kabaddiImg from './kabaddi-v2.png';
 import silambamImg from './silambam-v2.png';
 import coachesImg from '../assets/images/Coaches.png';
+import greenSchoolingImg from '../assets/images/Green-Schooling.png';
+import nutritionScreeningImg from '../assets/images/Nutrition-Screening.png';
 
 interface HomeViewProps {
   onNavigate: (view: string, detailId?: string) => void;
@@ -101,6 +105,20 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       name: 'Sports Arena Services', 
       desc: 'Advisory on athletic layout designs, turf and synthetic materials coordinating, and safety audits.',
       bg: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80'
+    },
+    { 
+      id: 'green-schooling-initiatives', 
+      num: '07', 
+      name: 'Green Schooling', 
+      desc: 'Promoting agriculture awareness, environmental responsibility, and experiential learning through sustainable school initiatives.',
+      bg: greenSchoolingImg
+    },
+    { 
+      id: 'nutrient-screening-initiatives', 
+      num: '08', 
+      name: 'Nutrient Screening', 
+      desc: 'Supporting nutrition awareness, health screening, and parental guidance to foster healthier student development.',
+      bg: nutritionScreeningImg
     }
   ];
 
@@ -108,9 +126,9 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
     athletics: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=500&q=80',
     football: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=500&q=80',
     basketball: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500&q=80',
-    hockey: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=500&q=80',
+    hockey: hockeyImg,
     tennis: 'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=500&q=80',
-    pickleball: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=500&q=80',
+    pickleball: pickleballImg,
     kabaddi: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=500&q=80',
     silambam: 'https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&w=500&q=80'
   };
@@ -138,7 +156,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       id: 'hockey', 
       name: 'Hockey', 
       tag: 'Speed & Resilience', 
-      bg: 'https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=500&q=80'
+      bg: hockeyImg
     },
     { 
       id: 'tennis', 
@@ -150,7 +168,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       id: 'pickleball', 
       name: 'Pickleball', 
       tag: 'Dynamic Reflexes', 
-      bg: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=500&q=80'
+      bg: pickleballImg
     },
     { 
       id: 'kabaddi', 

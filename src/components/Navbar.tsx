@@ -15,6 +15,8 @@ const programSubItems = [
   { id: 'coach-development', label: 'Coach Development' },
   { id: 'seasonal-camps', label: 'Seasonal Camps' },
   { id: 'sports-arena-services', label: 'Sports Arena Services' },
+  { id: 'green-schooling-initiatives', label: 'Green Schooling' },
+  { id: 'nutrient-screening-initiatives', label: 'Nutrient Screening' },
 ];
 
 const sportsSubItems = [

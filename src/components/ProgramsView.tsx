@@ -9,6 +9,8 @@ import sportsArenaImg from '../assets/images/Programs/Sports-Arena-Development.p
 import coachDevelopmentImg from '../assets/images/Programs/Coach-Development.png';
 import seasonalCampsImg from '../assets/images/Programs/Seasonal-Camps.png';
 import eventsCompetitionsImg from '../assets/images/Programs/events-competitions.png';
+import greenSchoolingImg from '../assets/images/Programs/Green-Schooling.png';
+import nutritionalScreeningImg from '../assets/images/Programs/nutritional-screening.png';
 
 const programImages: Record<string, string> = {
   'in-school-training': inschoolImg,
@@ -17,6 +19,8 @@ const programImages: Record<string, string> = {
   'coach-development': coachDevelopmentImg,
   'seasonal-camps': seasonalCampsImg,
   'sports-arena-services': sportsArenaImg,
+  'green-schooling-initiatives': greenSchoolingImg,
+  'nutrient-screening-initiatives': nutritionalScreeningImg,
 };
 
 interface ProgramsViewProps {
@@ -166,7 +170,7 @@ export default function ProgramsView({ onNavigate, initialSelectedId }: Programs
                 <img 
                   src={programImages[selectedId]} 
                   alt={`${activeProgram.name} Overview Banner`} 
-                  className="w-full h-[240px] sm:h-[320px] object-cover rounded-sm my-6 shadow-sm border border-gray-100"
+                  className="w-full h-[240px] sm:h-[320px] object-contain bg-gray-50 rounded-sm my-6 shadow-sm border border-gray-100"
                   referrerPolicy="no-referrer"
                 />
               </div>
