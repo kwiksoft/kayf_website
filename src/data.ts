@@ -24,6 +24,14 @@ export const valuesData: ValueItem[] = [
   {
     name: 'Respect & Sportsmanship',
     description: 'Fostering cooperation, empathy, mutual respect, and the true spirit of sports beyond rivalry and aggression.'
+  },
+  {
+    name: 'Livelihood',
+    description: 'Encouraging self-reliance, practical skills, career readiness, and sustainable opportunities for future growth.'
+  },
+  {
+    name: 'Wellness',
+    description: 'Promoting physical health, balanced nutrition, mental well-being, and healthy lifestyle practices.'
   }
 ];
 
@@ -130,6 +138,10 @@ export const programsData: ProgramDetail[] = [
       {
         title: 'Tactical & Match Intelligence',
         items: ['Decision making under pressure, spatial awareness, match reading, game flow, and strategic execution.']
+      },
+      {
+        title: 'Licensed & Certified Coaching',
+        items: ['Professional coaching delivered by licensed and certified instructors committed to safe, structured, and progressive athlete development.']
       }
     ],
     forWhom: [
@@ -163,7 +175,9 @@ export const programsData: ProgramDetail[] = [
       'Visible improvement in technical performance, physical conditioning, and tactical awareness.',
       'Confidence to participate at school, district, and higher levels of competition.',
       'Discipline and healthy training habits that protect long-term athletic health.',
-      'A clear personal roadmap for continued sporting development beyond a single season.'
+      'A clear personal roadmap for continued sporting development beyond a single season.',
+      'Guidance on how to apply scholarships in foreign universities which offer sports along with education.',
+      'Create opportunities to participate in the tournaments which are organised by the foreign clubs and countries.'
     ],
     ecosystemLink: 'Pro Coaching athletes naturally progress to KAYF Events & Competitions for organised competitive exposure, and may attend Seasonal Camps for focused skill acceleration.',
     ctaText: 'Unlock Greater Potential Through Professional Coaching.',
@@ -175,14 +189,16 @@ export const programsData: ProgramDetail[] = [
     name: 'Events & Competitions',
     heroTagline: 'Meaningful Competition. Real Development. Lasting Confidence.',
     heroSub: 'Sporting events and competitions designed to encourage participation, exposure, and athlete progression at every level.',
-    overview: 'KAY\'s Events & Competitions Program creates organised sporting opportunities that help athletes experience real participation, performance environments, and developmental exposure. The initiative supports athletes, schools, and institutions through carefully planned competitions, sporting activities, and participation pathways that build confidence, teamwork, discipline, and performance maturity. The objective is not merely organising events, but creating developmental sporting experiences that contribute to long-term athlete growth.',
+    overview: 'KAYF\'s Events & Competitions Program creates organised sporting opportunities that help athletes experience real participation, performance environments, and developmental exposure. The initiative supports athletes, schools, and institutions through carefully planned competitions, sporting activities, and participation pathways that build confidence, teamwork, discipline, and performance maturity. The objective is not merely organising events, but creating developmental sporting experiences that contribute to long-term athlete growth.',
     importanceTitle: 'Why Competitive Exposure Matters',
     importanceList: [
       'Teaches critical pressure lessons that regular practice alone cannot replicate',
       'Shapes character through the thrill of victory and lessons of defeat',
       'Builds focus, match discipline, and emotional bounds over multiple matches',
       'Provides a transparent framework for objective skill assessment',
-      'Creates pathways for talent identification by scouts and institutional selectors'
+      'Creates pathways for talent identification by scouts and institutional selectors',
+      'International sports exposure gives self confidence and carrier guidance in sports entrepreneurship.',
+      'Creates opportunities to play for the renowned clubs through international scouting programs.'
     ],
     coverage: [
       {
@@ -205,6 +221,13 @@ export const programsData: ProgramDetail[] = [
         items: [
           'Performance Reviews: Post-competition video and data analysis to highlight development priorities.',
           'Exposure Opportunities: Pathways to local, state, and advanced national representation platforms.'
+        ]
+      },
+      {
+        title: 'International appearances',
+        items: [
+          'creates a pathway to participate in the international scouting programs of the foreign clubs and countries',
+          'facilitates increased chances of getting scholarships in foreign universities.'
         ]
       }
     ],
@@ -258,7 +281,10 @@ export const programsData: ProgramDetail[] = [
       'Modern sports require coaches to understand sports psychology, safety, and athlete behavior',
       'Improves safety standards, scientific recovery, and training session efficiency',
       'Promotes ethical sports citizenship, respect, and character development',
-      'Keeps physical education instructors updated with latest pedagogy and technology'
+      'Keeps physical education instructors updated with latest pedagogy and technology',
+      'Gives an additional knowledge on international rules & standards in each and every respective sports',
+      'Improves the knowledge on many sports clubs and forums which organise various sporting programs and tournaments.',
+      'Improves the skills on identifying appropriate sporting programs to participate based on the organising abilities of the organisers.'
     ],
     coverage: [
       {
@@ -280,6 +306,13 @@ export const programsData: ProgramDetail[] = [
         items: [
           'Athlete Development Awareness: Understanding youth psychology, positive reinforcement, and behavioral traits.',
           'Mentorship & Learning Initiatives: Peer networks and counseling from senior regional experts.'
+        ]
+      },
+      {
+        title: 'Motivation and mentorship',
+        items: [
+          'Coach motivation on the importance and opportunities in obtaining various international certifications through renowned coaches.',
+          'Mentorship through foreign coaches on various skills which are most useful in the sporting fields.'
         ]
       }
     ],
@@ -333,7 +366,10 @@ export const programsData: ProgramDetail[] = [
       'The highly structured daily schedule fosters deep personal discipline and autonomy',
       'Minimizes external academic distractions, allowing intensive sports immersion',
       'Encourages diverse social mixing, team building, and long-standing regional friendships',
-      'Propels physical fitness and stamina to new baselines in a compressed time-frame'
+      'Propels physical fitness and stamina to new baselines in a compressed time-frame',
+      'Increases the feasibility to participate over regular school and job schedules of students and coaches respectively.',
+      'Improves the mental relaxation of students and coaches over their routine status.',
+      'Increases the enjoyment of sports through various climatic conditions with improved energy as well as stamina levels when it happens in hill stations or near water bodies.'
     ],
     coverage: [
       {
@@ -384,7 +420,9 @@ export const programsData: ProgramDetail[] = [
       'Significant confidence gains born out of meeting challenge modules and active matches.',
       'Strong friendships and a network of shared sports interest across schools and communities.',
       'Refreshed motivation and absolute clarity on next athlete development steps.',
-      'A certificate of participation verifying rigorous sports training hours under KAYF.'
+      'A certificate of participation verifying rigorous sports training hours under KAYF.',
+      'Increased mental health and improved involvement.',
+      'Improved adaptation to variable climatic conditions.'
     ],
     ecosystemLink: 'Participants in Seasonal Camps may continue their development journey through KAYF Pro Coaching programs and Events & Competitions initiatives.',
     ctaText: 'Experience Focused Sports Development Through Camps.',
@@ -464,6 +502,158 @@ export const programsData: ProgramDetail[] = [
     ecosystemLink: 'Institutions strengthening their sports infrastructure through KAYF may further support participation through In-School Training programs, Camps, and broader youth development activities.',
     ctaText: 'Create Sporting Spaces That Encourage Participation and Growth.',
     ctaButton: 'Explore Arena Support Services'
+  },
+  {
+    id: 'green-schooling-initiatives',
+    num: '07',
+    name: 'Green Schooling Initiatives',
+    heroTagline: 'Learning from Nature. Growing with Responsibility.',
+    heroSub: 'KAYF believes that education extends beyond classrooms and sports fields. Through practical learning experiences, students are introduced to agriculture, environmental stewardship, and sustainable living.',
+    overview: 'Through its Green Schooling Initiatives, KAYF introduces students to the importance of agriculture, environmental stewardship, and sustainable living. By combining knowledge with hands-on exposure, we encourage young minds to appreciate the role of agriculture in human life while promoting environmental awareness and community responsibility.',
+    importanceTitle: 'Why Green Schooling Matters',
+    importanceList: [
+      'Creates deep awareness about the importance of agriculture in human life.',
+      'Provides hands-on learning experiences in practical agricultural practices.',
+      'Encourages environmental responsibility and sustainable thinking.',
+      'Organises educational exposure visits to modern and traditional farming ecosystems.',
+      'Inspires students to appreciate nature, food production, and rural livelihoods.'
+    ],
+    coverage: [
+      {
+        title: 'Agricultural Exposure',
+        items: [
+          'Importance of agriculture in everyday life: understanding food production ecosystems.',
+          'Polyhouse farming: learning about controlled environment agriculture and modern greenhouses.',
+          'Natural farming methods: understanding chemical-free, sustainable soil care and crop cultivation.'
+        ]
+      },
+      {
+        title: 'Specialized Farming Ecosystems',
+        items: [
+          'Dairy farming: understanding livestock management, hygiene, and dairy production.',
+          'Aquaculture farming: exploring aquatic life production and eco-balanced water systems.',
+          'Sustainable agricultural practices: conserving resources, recycling waste, and protecting biodiversity.'
+        ]
+      },
+      {
+        title: 'Practical Stewardship',
+        items: [
+          'Hands-on agricultural learning activities: preparing soil, sowing seeds, weeding, and composting.',
+          'Educational exposure visits: touring traditional farms, modern research centers, and ecological projects.'
+        ]
+      }
+    ],
+    forWhom: [
+      {
+        category: 'School Students',
+        description: 'Curious young minds eager to explore agriculture, nature, and hands-on environmental activities.'
+      },
+      {
+        category: 'Educational Institutions',
+        description: 'Schools looking to integrate experiential learning, ecological clubs, and practical biology into their curriculum.'
+      },
+      {
+        category: 'Teachers & Educators',
+        description: 'Instructors seeking practical field-learning programs to complement environmental science subjects.'
+      },
+      {
+        category: 'Student Eco-Clubs & Schools',
+        description: 'Student-led community groups and academic institutions interested in hands-on sustainability and experiential programs.'
+      }
+    ],
+    approach: [
+      { title: 'Awareness', description: 'Creating awareness about the importance of agriculture in human life.' },
+      { title: 'Hands-on Learning', description: 'Providing practical learning experiences in agricultural practices.' },
+      { title: 'Sustainability', description: 'Encouraging environmental responsibility and sustainable thinking.' },
+      { title: 'Exposure Visits', description: 'Organising educational exposure visits to modern and traditional farming ecosystems.' },
+      { title: 'Appreciation', description: 'Inspiring students to appreciate nature, food production, and rural livelihoods.' }
+    ],
+    outcomes: [
+      'Environmental awareness',
+      'Appreciation for agriculture and nature',
+      'Practical learning experiences',
+      'Observation and analytical skills',
+      'Community responsibility',
+      'Respect for sustainable living'
+    ],
+    ecosystemLink: 'At KAYF, meaningful education nurtures both knowledge and responsibility. By connecting students with agriculture and nature, we inspire future generations to value sustainability, respect the environment, and contribute positively to society.',
+    ctaText: 'Build Environmental Responsibility and Sustainable Values.',
+    ctaButton: 'Join Green Schooling'
+  },
+  {
+    id: 'nutrient-screening-initiatives',
+    num: '08',
+    name: 'Nutrient Screening Initiatives',
+    heroTagline: 'Better Nutrition. Healthier Students. Stronger Futures.',
+    heroSub: 'KAYF promotes awareness among students and parents while supporting schools in identifying nutritional concerns at an early stage for healthier growth and wellness.',
+    overview: 'KAYF recognises that good nutrition is fundamental to a child\'s physical growth, learning ability, overall health, and sporting performance. Through its Nutrient Screening Initiatives, KAYF promotes awareness among students and parents while supporting schools in identifying nutritional concerns at an early stage. The initiative encourages informed nutritional practices and healthy lifestyles that contribute to the long-term well-being and holistic development of every child.',
+    importanceTitle: 'Why Nutrition and Early Screening Matters',
+    importanceList: [
+      'Educates students and parents on the importance of proper nutrition.',
+      'Organises nutrient screening and health assessment camps in schools.',
+      'Encourages early identification of nutritional deficiencies.',
+      'Guides parents on appropriate nutritional support for healthy child development.',
+      'Promotes lifelong healthy eating habits and overall wellness.'
+    ],
+    coverage: [
+      {
+        title: 'Screening & Assessment',
+        items: [
+          'School-based nutrient screening camps: identifying dietary deficiencies early.',
+          'Basic health and nutritional assessments: measuring key development indicators.'
+        ]
+      },
+      {
+        title: 'Guidance & Advice',
+        items: [
+          'Parent guidance on nutritional care: helping families support children\'s physical growth.',
+          'Early intervention recommendations: advising on correct measures where nutritional concerns are found.'
+        ]
+      },
+      {
+        title: 'Education & Habit Building',
+        items: [
+          'Nutrition awareness programmes: teaching proper eating habits and nutrient benefits.',
+          'Awareness on healthy lifestyle practices: promoting long-term well-being and physical fitness.'
+        ]
+      }
+    ],
+    forWhom: [
+      {
+        category: 'School Students',
+        description: 'Young learners seeking to improve physical growth, energy levels, and nutritional knowledge.'
+      },
+      {
+        category: 'Parents & Guardians',
+        description: 'Caregivers looking for proper guidance on nutrition, healthy meal prep, and developmental support.'
+      },
+      {
+        category: 'Educational Institutions',
+        description: 'Schools aiming to prioritize student health, wellness, and concentration through structured camps.'
+      },
+      {
+        category: 'Teachers & Administrators',
+        description: 'School leaders interested in hosting professional health initiatives and student wellness assessments.'
+      }
+    ],
+    approach: [
+      { title: 'Educate', description: 'Educating students and parents on the importance of proper nutrition.' },
+      { title: 'Screen', description: 'Organising nutrient screening and health assessment camps in schools.' },
+      { title: 'Identify', description: 'Encouraging early identification of nutritional deficiencies.' },
+      { title: 'Guide', description: 'Guiding parents on appropriate nutritional support for healthy child development.' },
+      { title: 'Promote', description: 'Promoting lifelong healthy eating habits and overall wellness.' }
+    ],
+    outcomes: [
+      'Improved nutrition awareness',
+      'Better physical growth and development',
+      'Enhanced health and well-being',
+      'Increased energy and participation',
+      'Improved learning and concentration',
+      'Long-term healthy lifestyle habits'
+    ],
+    ecosystemLink: 'At KAYF, healthy children become confident learners, active participants, and stronger individuals. By promoting nutrition awareness and early health support, we contribute to healthier families, healthier schools, and healthier communities.',
+    ctaText: 'Establish Wholesome Health and Proper Nutrition in Your School.',
+    ctaButton: 'Register for Nutrient Screening'
   }
 ];
 
